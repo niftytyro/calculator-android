@@ -2,11 +2,17 @@
 <resources>
 
     <style name="Button">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_marginLeft">30dp</item>
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="rippleColor">@color/secondaryLight</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">15sp</item>
+        <item name="autoSizeMaxTextSize">18sp</item>
+        <item name="android:textColor">#DDDDDD</item>
+        <item name="maxLines">1</item>
     </style>
 
     <style name="SpecialOperations" parent="Button">
@@ -21,11 +27,22 @@
         <item name="android:textColor">@color/white100</item>
     </style>
 
-    <style name="ResultText">
+    <style name="ResultTextGroup">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">right</item>
         <item name="android:layout_marginRight">20dp</item>
         <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="PreviewText" parent="ResultTextGroup">
+        <item name="android:textColor">#DDDDDD</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ResultText" parent="ResultTextGroup">
+        <item name="android:textColor">#EAEAEA</item>
+        <item name="android:textSize">32sp</item>
     </style>
 </resources>
