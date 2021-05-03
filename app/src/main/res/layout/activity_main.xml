@@ -15,13 +15,11 @@
 
         <TextView
             android:id="@+id/textPreview"
-            style="@style/PreviewText"
-            android:text="102 + 5" />
+            style="@style/PreviewText" />
 
         <TextView
             android:id="@+id/textResult"
-            style="@style/ResultText"
-            android:text="107" />
+            style="@style/ResultText" />
 
     </LinearLayout>
 
