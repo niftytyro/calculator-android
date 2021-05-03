@@ -40,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         }
         try {
             result = expressionCopy[0]
-        } catch (e: java.lang.IndexOutOfBoundsException) {}
+        } catch (e: java.lang.IndexOutOfBoundsException) {
+        }
     }
 
     private fun calculateSubExpression(index: Int, expression: MutableList<String>): Boolean {
@@ -117,7 +118,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 expression += "$char"
             } catch (e: NoSuchElementException) {
-                if(result!="") {
+                if (result != "") {
                     expression += result
                     expression += "$char"
                 }
@@ -158,7 +159,7 @@ class MainActivity : AppCompatActivity() {
         buttonMultiplication.setOnClickListener { addToExpression('×') }
         buttonPercentage.setOnClickListener { addToExpression('%') }
         buttonSubtraction.setOnClickListener { addToExpression('-') }
-        buttonAC.setOnClickListener{ resetValues() }
-        buttonResult.setOnClickListener{ calculateTotal() }
+        buttonAC.setOnClickListener { resetValues() }
+        buttonResult.setOnClickListener { calculateTotal() }
     }
 }
