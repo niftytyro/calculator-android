@@ -28,15 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun calculateExpression() {
         val expressionCopy: MutableList<String> = expression.toMutableList()
-        for (operator in operators) {
-            var idx = 1
-            while (idx < expressionCopy.size) {
-                if (expressionCopy[idx] == operator.toString()) {
-                    if (calculateSubExpression(idx, expressionCopy)) idx--
-                }
-                idx++
+        var idx = 1
+        while(idx < expressionCopy.size) {
+            if(expressionCopy[idx][0] in operators) {
+                if (calculateSubExpression(idx, expressionCopy)) idx--
             }
-            println(expressionCopy)
+            idx++
         }
         try {
             result = expressionCopy[0]
